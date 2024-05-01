@@ -95,3 +95,19 @@ const playRound = (humanSelection, computerSelection) => {
 		console.log('Not a valid Round');
 	}
 };
+
+const playGame = () => {
+	humanScore = 0;
+	computerScore = 0;
+	for (let i = 0; i < 5; i++) {
+		playRound(getHumanChoice(), getComputerChoice());
+	}
+
+	if (humanScore === computerScore) {
+		console.log("It's a Tie! No one wins the game!");
+	} else if (humanScore > computerScore) {
+		console.log('Human wins the game!');
+	} else {
+		console.log('Computer wins the game!');
+	}
+};
